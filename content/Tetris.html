@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Tetris.html'>Tetris</a><li><a href='H1 midter.html'>H1 midter</a><li><a href='w14 線上作業.html'>w14 線上作業</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Tetris.html'>Tetris</a><li><a href='H1 midterm.html'>H1 midterm</a><li><a href='w14 線上作業.html'>w14 線上作業</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Develop << <a href='Develop.html'>Previous</a> <a href='H1 midter.html'>Next</a> >> H1 midter<br /><h1>Tetris</h1>
+    <div id="tipue_search_content">Develop << <a href='Develop.html'>Previous</a> <a href='H1 midterm.html'>Next</a> >> H1 midterm<br /><h1>Tetris</h1>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -210,6 +210,26 @@ doc['clear_bd'].bind('click', clear_bd)
 run()
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/a983a728c928521597c9c4feece9e6e5/raw/d63ae43e18826f36db6e8e79e85045a8b5548d68/Tetris%2520-%2520score"
+src = open(url).read()
+tetris2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["tetris2"].bind("click", tetris2.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/8d3c8b72092f53ffaf41a13f495e0eaf/raw/b23ac14ebb64826562e0d0876f6d5bdc3b6b6469/Tetris-3"
+src = open(url).read()
+tetris3= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["tetris3"].bind("click", tetris3.prog)
+</script>
+</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -217,6 +237,7 @@ run()
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><button id="tetris2">tetris-2</button> <button id="tetris3">tetris-3</button></p>
 <!-- 執行與清除按鈕結束 -->
 <p></p>
 <!-- 程式執行 ouput 區 -->
@@ -228,8 +249,7 @@ run()
 <script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
-<br />Develop << <a href='Develop.html'>Previous</a> <a href='H1 midter.html'>Next</a> >> H1 midter</div>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script><br />Develop << <a href='Develop.html'>Previous</a> <a href='H1 midterm.html'>Next</a> >> H1 midterm</div>
         
     <!-- footer -->
       <div class="container">
