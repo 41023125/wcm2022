@@ -124,6 +124,16 @@ tetris4 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py
 document["tetris4"].bind("click", tetris4.prog)
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/87dda0045d2774cf58ac915da8ad88d7/raw/12fcbdac2fd4ffa04cbce67bfee10383c1ef41e0/Tetris-5"
+src = open(url).read()
+tetris5 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["tetris5"].bind("click", tetris5.prog)
+</script>
+</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -131,7 +141,7 @@ document["tetris4"].bind("click", tetris4.prog)
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="tetris1">tetris-1</button> <button id="tetris2">tetris-2</button> <button id="tetris3">tetris-3</button> <button id="tetris4">tetris-4</button></p>
+<p><button id="tetris1">tetris-1</button> <button id="tetris2">tetris-2</button> <button id="tetris3">tetris-3</button> <button id="tetris4">tetris-4</button> <button id="tetris5">tetris-5</button></p>
 <!-- 執行與清除按鈕結束 -->
 <p></p>
 <!-- 程式執行 ouput 區 -->
