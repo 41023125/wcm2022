@@ -214,6 +214,16 @@ run()
 <script type="text/python3">
 import beditor
 from browser import document
+url = "https://gist.githubusercontent.com/41023125/814d939de4dcc46961d52cfb48303539/raw/611b516f44d5f31ef4407e596761e7af30da753e/Tetris"
+src = open(url).read()
+tetris1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["tetris1"].bind("click", tetris1.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
 url = "https://gist.githubusercontent.com/41023125/a983a728c928521597c9c4feece9e6e5/raw/d63ae43e18826f36db6e8e79e85045a8b5548d68/Tetris%2520-%2520score"
 src = open(url).read()
 tetris2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
@@ -230,6 +240,16 @@ tetris3= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_
 document["tetris3"].bind("click", tetris3.prog)
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/706176725a26a789c97ce423014f257a/raw/a40ed9f00c8a83f76ae4c4b990572d44bf715682/Tetris-4"
+src = open(url).read()
+tetris4 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["tetris4"].bind("click", tetris4.prog)
+</script>
+</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -237,7 +257,7 @@ document["tetris3"].bind("click", tetris3.prog)
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="tetris2">tetris-2</button> <button id="tetris3">tetris-3</button></p>
+<p><button id="tetris1">tetris-1</button> <button id="tetris2">tetris-2</button> <button id="tetris3">tetris-3</button> <button id="tetris4">tetris-4</button></p>
 <!-- 執行與清除按鈕結束 -->
 <p></p>
 <!-- 程式執行 ouput 區 -->
